@@ -10,6 +10,7 @@ iframe {
 }
 
 .item_form {
+  padding-top: 60px;
   width: 60%;
   margin: 0 auto;
   input { display: block;  width: 100%;}
@@ -19,5 +20,11 @@ iframe {
 @media screen and (max-width: 800px) {
   .item_form {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .item_form {
+    padding-top: 10px;
   }
 }
