@@ -1,0 +1,5 @@
+- title(@item.title)
+- unless @weixin_agent
+  = render 'layouts/jiathis'
+iframe src=@item.url
+img.item_image src=@item.image_url
