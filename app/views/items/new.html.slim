@@ -1,3 +1,11 @@
-= form_for Item.new, html: { class: 'item_form'} do |f|
+
+= form_for  @item , html: { class: 'item_form'} do |f|
+  - if @item.errors.any?
+    #error_explanation
+      h2
+        =  "添加宝贝时出现#{@item.errors.count}个错误 :"
+      ul
+        - @item.errors.full_messages.each do |msg|
+          li = msg
   =f.text_field :url, placeholder: '宝贝链接'
   =f.submit "Duang 一下", data: { disable_with: "duang duang ... 请耐心等待" }
